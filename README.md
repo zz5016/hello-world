@@ -1,2 +1,5 @@
 # hello-world
-Noobie.
+
+Hi there,
+My first experience with Github looks awesome.
+Github Noobie.
