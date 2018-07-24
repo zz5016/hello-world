@@ -1,0 +1,228 @@
+Dell@DESKTOP-JMILD9F MINGW64 ~
+$ git --version
+git version 2.18.0.windows.1
+
+Dell@DESKTOP-JMILD9F MINGW64 ~
+$ git config --global user.name "zz5016"
+
+Dell@DESKTOP-JMILD9F MINGW64 ~
+$ git config --global user.email "zz5016@ic.ac.uk"
+
+Dell@DESKTOP-JMILD9F MINGW64 ~
+$ git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+rebase.autosquash=true
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+http.sslbackend=openssl
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+credential.helper=manager
+winupdater.recentlyseenversion=2.18.0.windows.1
+user.name=zz5016
+user.email=zz5016@ic.ac.uk
+
+Dell@DESKTOP-JMILD9F MINGW64 ~
+$ git clone https://github.com/zz5016/hello-world.git
+Cloning into 'hello-world'...
+remote: Counting objects: 25, done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 25 (delta 2), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (25/25), done.
+
+Dell@DESKTOP-JMILD9F MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+ Contacts/
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ hello-world/
+ IntelGraphicsProfiles/
+ Links/
+ MicrosoftEdgeBackups/
+ Music/
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{4ad54f01-5904-11e8-9cd8-eedc14ec5b20}.TM.blf
+ NTUSER.DAT{4ad54f01-5904-11e8-9cd8-eedc14ec5b20}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{4ad54f01-5904-11e8-9cd8-eedc14ec5b20}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Pictures/
+'Saved Games'/
+ Searches/
+ UROP2018/
+ Videos/
+
+Dell@DESKTOP-JMILD9F MINGW64 ~
+$ cd hello-world
+
+# Add info.txt & UROP.txt
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ ls -la
+total 31
+drwxr-xr-x 1 Dell 197121     0 Jul 23 11:54 ./
+drwxr-xr-x 1 Dell 197121     0 Jul 24 00:51 ../
+-rw-r--r-- 1 Dell 197121 12288 Jul 23 11:53 .swp
+-rw-r--r-- 1 Dell 197121   106 Jul 23 11:50 _config.yml
+-rw-r--r-- 1 Dell 197121    23 Jul 23 11:54 info.txt
+-rw-r--r-- 1 Dell 197121    46 Jul 23 11:50 README.md
+-rw-r--r-- 1 Dell 197121     4 Jul 24 11:55 urop.txt
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world
+$ git init
+Initialized empty Git repository in C:/Users/Dell/hello-world/.git/
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ ls -la
+total 35
+drwxr-xr-x 1 Dell 197121     0 Jul 24 00:56 ./
+drwxr-xr-x 1 Dell 197121     0 Jul 24 00:51 ../
+drwxr-xr-x 1 Dell 197121     0 Jul 24 00:56 .git/
+-rw-r--r-- 1 Dell 197121 12288 Jul 23 11:53 .swp
+-rw-r--r-- 1 Dell 197121   106 Jul 23 11:50 _config.yml
+-rw-r--r-- 1 Dell 197121    23 Jul 23 11:54 info.txt
+-rw-r--r-- 1 Dell 197121    46 Jul 23 11:50 README.md
+-rw-r--r-- 1 Dell 197121     4 Jul 24 11:55 urop.txt
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ rm -rf .git
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world
+$ git init
+Initialized empty Git repository in C:/Users/Dell/hello-world/.git/
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        info.txt
+        urop.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ touch .gitignore
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        urop.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git add .gitignore
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git add -A
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   urop.txt
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git commit -m"Updated hello-world"
+[master 0d38d74] Updated hello-world
+ 2 files changed, 2 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 urop.txt
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git remote -v
+origin  https://github.com/zz5016/hello-world.git (fetch)
+origin  https://github.com/zz5016/hello-world.git (push)
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git pull origin master
+From https://github.com/zz5016/hello-world
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 392 bytes | 130.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/zz5016/hello-world.git
+   ea37e44..0d38d74  master -> master
+
+Dell@DESKTOP-JMILD9F MINGW64 ~/hello-world (master)
+$ cd ..
+
+Dell@DESKTOP-JMILD9F MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+ Contacts/
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ hello-world/
+ IntelGraphicsProfiles/
+ Links/
+ MicrosoftEdgeBackups/
+ Music/
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{4ad54f01-5904-11e8-9cd8-eedc14ec5b20}.TM.blf
+ NTUSER.DAT{4ad54f01-5904-11e8-9cd8-eedc14ec5b20}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{4ad54f01-5904-11e8-9cd8-eedc14ec5b20}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Pictures/
+'Saved Games'/
+ Searches/
+ UROP2018/
+ Videos/
